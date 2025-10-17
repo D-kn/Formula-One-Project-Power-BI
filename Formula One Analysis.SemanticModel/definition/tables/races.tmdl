@@ -65,7 +65,7 @@ table races
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\races.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents(SourceFiles & "races.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Removed Blank Rows" = Table.SelectRows(Source, each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
 				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Blank Rows", [PromoteAllScalars=true]),
 				    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers",{"time", "url"}),

@@ -1,0 +1,7 @@
+expression SourceFiles = "C:\Users\RolvyDickenNGOLOMOUN\Documents\Training And Certifications\Microsoft Power BI The Complete Guide\Formula One Project\Data Sources\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 4dbb118c-d268-4756-8d1f-99ad102235eb
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

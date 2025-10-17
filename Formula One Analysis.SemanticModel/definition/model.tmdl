@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["races","circuits","drivers","constructors","results"]
+annotation PBI_QueryOrder = ["SourceFiles","races","circuits","drivers","constructors","results"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 

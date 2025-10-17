@@ -78,7 +78,7 @@ table results
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\results.csv"),[Delimiter=",", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents(SourceFiles & "results.csv"),[Delimiter=",", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Removed Other Columns" = Table.SelectColumns(#"Promoted Headers",{"resultId", "raceId", "driverId", "constructorId", "number", "grid", "positionOrder", "points"}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"resultId", "result_id"}, {"raceId", "race_id"}, {"driverId", "driver_id"}, {"constructorId", "constructor_id"}, {"number", "driver_number"}, {"grid", "grid_position"}, {"positionOrder", "finish_position"}}),

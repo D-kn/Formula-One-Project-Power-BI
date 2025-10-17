@@ -54,7 +54,7 @@ table drivers
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\drivers.txt"),[Delimiter="	", Columns=9, Encoding=1200, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents(SourceFiles & "drivers.txt"),[Delimiter="#(tab)", Columns=9, Encoding=1200, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"driverId", Int64.Type}, {"driverRef", type text}, {"number", type text}, {"code", type text}, {"forename", type text}, {"surname", type text}, {"dob", type text}, {"nationality", type text}, {"url", type text}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"driverRef", "code", "url"}),

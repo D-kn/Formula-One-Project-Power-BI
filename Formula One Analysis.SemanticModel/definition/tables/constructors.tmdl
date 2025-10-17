@@ -30,7 +30,7 @@ table constructors
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\constructors.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents(SourceFiles & "constructors.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"constructorId", Int64.Type}, {"constructorRef", type text}, {"name", type text}, {"nationality", type text}, {"url", type text}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"constructorRef", "url"}),
