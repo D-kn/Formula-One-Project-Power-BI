@@ -1,0 +1,71 @@
+table drivers
+	lineageTag: 214c875f-1929-4da6-b31b-94fd159b1c11
+
+	column driver_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 80c64cbb-81f3-44bc-9680-9ce4485e4fcd
+		summarizeBy: sum
+		sourceColumn: driver_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_number
+		dataType: string
+		lineageTag: c42eebc5-2cd5-4f8b-82ea-6f6ad3ff2774
+		summarizeBy: none
+		sourceColumn: driver_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_name
+		dataType: string
+		lineageTag: 50c23796-18a3-405d-906c-47bdd4dc1778
+		summarizeBy: none
+		sourceColumn: driver_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_dob
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4496955f-3bed-4e61-b904-d8d3509e3318
+		summarizeBy: none
+		sourceColumn: driver_dob
+
+		variation Variation
+			isDefault
+			relationship: ad16ab6b-30c5-41d6-be2e-43f0c4480b6f
+			defaultHierarchy: LocalDateTable_742fac51-a919-44ed-89a3-0a9adf47abe7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column driver_nationality
+		dataType: string
+		lineageTag: 10202f45-b8e0-470a-9bca-b709c3589964
+		summarizeBy: none
+		sourceColumn: driver_nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	partition drivers-89b3d2af-d6d0-4f87-87cd-995b1c6dac45 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\drivers.txt"),[Delimiter="	", Columns=9, Encoding=1200, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"driverId", Int64.Type}, {"driverRef", type text}, {"number", type text}, {"code", type text}, {"forename", type text}, {"surname", type text}, {"dob", type text}, {"nationality", type text}, {"url", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"driverRef", "code", "url"}),
+				    #"Merged Columns" = Table.CombineColumns(#"Removed Columns",{"forename", "surname"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"Merged"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Merged Columns",{{"driverId", "driver_id"}, {"number", "driver_number"}, {"Merged", "driver_name"}, {"dob", "driver_dob"}, {"nationality", "driver_nationality"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","\N",null,Replacer.ReplaceValue,{"driver_id", "driver_number", "driver_name", "driver_dob", "driver_nationality"}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Replaced Value", {{"driver_dob", type date}}, "en-GB")
+				in
+				    #"Changed Type with Locale"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

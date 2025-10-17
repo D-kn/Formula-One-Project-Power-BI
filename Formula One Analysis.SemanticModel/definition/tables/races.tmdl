@@ -1,0 +1,84 @@
+table races
+	lineageTag: 04bf7442-45cb-48b8-bc39-a21aadaaa102
+
+	column race_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ae835b5a-04c8-4744-8455-f2fd3fa880e4
+		summarizeBy: sum
+		sourceColumn: race_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: a022a623-5a01-4af2-aca3-9b31b4a4e38b
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column round
+		dataType: int64
+		formatString: 0
+		lineageTag: 86a82ccd-1f44-4898-817b-03b8002a3d05
+		summarizeBy: sum
+		sourceColumn: round
+
+		annotation SummarizationSetBy = Automatic
+
+	column circuit_id
+		dataType: int64
+		formatString: 0
+		lineageTag: bf289b7a-9055-44d7-a03c-42226bb0ef15
+		summarizeBy: sum
+		sourceColumn: circuit_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column grand_prix
+		dataType: string
+		lineageTag: c488f922-cf76-4680-a918-cc57e8d3ec7b
+		summarizeBy: none
+		sourceColumn: grand_prix
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 005d7006-3ba0-49e7-a034-5309754a24ed
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: d07588e4-a3a8-471a-8889-444c7651a0fe
+			defaultHierarchy: LocalDateTable_c9c58190-5a94-4fde-825d-838a98e8f925.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition races-cec99ce1-5d8b-4964-97ef-1b2bdde741cb = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\races.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Removed Blank Rows" = Table.SelectRows(Source, each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Blank Rows", [PromoteAllScalars=true]),
+				    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers",{"time", "url"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"raceId", Int64.Type}, {"year", Int64.Type}, {"round", Int64.Type}, {"circuitId", Int64.Type}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"date", type date}}, "en-GB"),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type with Locale",{"raceId", "year", "round", "circuitId", "name", "date"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"raceId", "race_id"}, {"circuitId", "circuit_id"}, {"name", "grand_prix"}}),
+				    #"Sorted Rows" = Table.Sort(#"Renamed Columns",{{"year", Order.Descending}, {"round", Order.Ascending}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Sorted Rows","Grand Prix","GP",Replacer.ReplaceText,{"grand_prix"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

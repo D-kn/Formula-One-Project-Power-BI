@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Formula One Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8f9c55e2-87a1-412c-bf75-2ed4a749b7d4"
+  }
+}

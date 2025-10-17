@@ -1,0 +1,44 @@
+table constructors
+	lineageTag: 1fb70dec-2848-4770-a0b1-a04783be71cd
+
+	column constructor_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a97057e-2c54-436c-aed4-4db7c2f2439e
+		summarizeBy: sum
+		sourceColumn: constructor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column constructor_name
+		dataType: string
+		lineageTag: 4dd0e446-0dc8-49fa-8205-f40fcf06b459
+		summarizeBy: none
+		sourceColumn: constructor_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column constructor_nationality
+		dataType: string
+		lineageTag: 2fb3856a-d99e-41f5-b8d1-efe18e08f612
+		summarizeBy: none
+		sourceColumn: constructor_nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	partition constructors-12db65d1-0b84-46a5-a60a-29ccb4b84638 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\constructors.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"constructorId", Int64.Type}, {"constructorRef", type text}, {"name", type text}, {"nationality", type text}, {"url", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"constructorRef", "url"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"constructorId", "constructor_id"}, {"name", "constructor_name"}, {"nationality", "constructor_nationality"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

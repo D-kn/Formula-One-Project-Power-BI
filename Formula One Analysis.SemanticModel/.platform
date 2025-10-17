@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Formula One Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5d9bdb79-a0bf-4b4a-802b-9b0c4914fa49"
+  }
+}

@@ -1,0 +1,93 @@
+table results
+	lineageTag: 9d00a7f3-5ecd-4198-a42f-7c79006cc6fd
+
+	column result_id
+		dataType: int64
+		formatString: 0
+		lineageTag: aba1a504-ea90-4d67-a93f-4e4381a20ecb
+		summarizeBy: sum
+		sourceColumn: result_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column race_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 996b4094-d9c0-4f05-ad02-ad6d849f7209
+		summarizeBy: sum
+		sourceColumn: race_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_id
+		dataType: int64
+		formatString: 0
+		lineageTag: fad2fb4d-3fcb-49ef-bd3a-d89648ae24d5
+		summarizeBy: sum
+		sourceColumn: driver_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column constructor_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 49519d7c-b239-459e-a852-2887547398e7
+		summarizeBy: sum
+		sourceColumn: constructor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 79013c5c-10b7-4f62-b220-0e3514e1d9b3
+		summarizeBy: sum
+		sourceColumn: driver_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column grid_position
+		dataType: int64
+		formatString: 0
+		lineageTag: fd0d3377-34bd-41a1-80f8-5504124d82fe
+		summarizeBy: sum
+		sourceColumn: grid_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column finish_position
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b14b23b-cbd0-4c1e-ae11-634588edd79b
+		summarizeBy: sum
+		sourceColumn: finish_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column points
+		dataType: double
+		lineageTag: e1e1acfa-ecfe-4ab5-a1ef-bf869704108c
+		summarizeBy: sum
+		sourceColumn: points
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition results-fa4bf0e5-7ebe-460a-862e-3bb23e2289d2 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("\\Mac\Home\Desktop\Formula One Data Model\results.csv"),[Delimiter=",", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Promoted Headers",{"resultId", "raceId", "driverId", "constructorId", "number", "grid", "positionOrder", "points"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"resultId", "result_id"}, {"raceId", "race_id"}, {"driverId", "driver_id"}, {"constructorId", "constructor_id"}, {"number", "driver_number"}, {"grid", "grid_position"}, {"positionOrder", "finish_position"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","\N",null,Replacer.ReplaceValue,{"driver_number"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"result_id", Int64.Type}, {"race_id", Int64.Type}, {"driver_id", Int64.Type}, {"constructor_id", Int64.Type}, {"driver_number", Int64.Type}, {"grid_position", Int64.Type}, {"finish_position", Int64.Type}, {"points", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

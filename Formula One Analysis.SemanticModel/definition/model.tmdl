@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["races","circuits","drivers","constructors","results"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table races
+ref table DateTableTemplate_2594c50e-ee1d-4057-939b-73d024622586
+ref table LocalDateTable_c9c58190-5a94-4fde-825d-838a98e8f925
+ref table circuits
+ref table drivers
+ref table LocalDateTable_742fac51-a919-44ed-89a3-0a9adf47abe7
+ref table constructors
+ref table results
+
+ref cultureInfo en-US
+
