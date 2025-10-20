@@ -8,3 +8,21 @@ relationship ad16ab6b-30c5-41d6-be2e-43f0c4480b6f
 	fromColumn: drivers.driver_dob
 	toColumn: LocalDateTable_742fac51-a919-44ed-89a3-0a9adf47abe7.Date
 
+relationship 5d4ddc8d-86e2-5425-9f02-80297a53aa6a
+	crossFilteringBehavior: bothDirections
+	fromColumn: results.'results.driver_id'
+	toColumn: drivers.'drivers.driver_id'
+
+relationship 267b6288-212b-6126-9a68-3df3c7db0c82
+	fromColumn: results.'results.race_id'
+	toColumn: races.'races.race_id'
+
+relationship f37314f8-bf30-46e3-31bc-64094b07028d
+	crossFilteringBehavior: bothDirections
+	fromColumn: races.'races.circuit_id'
+	toColumn: circuits.'circuits.circuit_id'
+
+relationship 1c93e508-401f-6977-d265-a5534fda38dc
+	fromColumn: results.'results.constructor_id'
+	toColumn: constructors.'constructors.constructor_id'
+
