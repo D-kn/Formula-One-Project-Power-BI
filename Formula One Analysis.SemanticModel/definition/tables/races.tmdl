@@ -1,12 +1,12 @@
 table races
 	lineageTag: 04bf7442-45cb-48b8-bc39-a21aadaaa102
 
-	column race_id
+	column 'races.race_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: ae835b5a-04c8-4744-8455-f2fd3fa880e4
-		summarizeBy: sum
-		sourceColumn: race_id
+		summarizeBy: none
+		sourceColumn: races.race_id
 
 		annotation SummarizationSetBy = Automatic
 
@@ -28,12 +28,12 @@ table races
 
 		annotation SummarizationSetBy = Automatic
 
-	column circuit_id
+	column 'races.circuit_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: bf289b7a-9055-44d7-a03c-42226bb0ef15
-		summarizeBy: sum
-		sourceColumn: circuit_id
+		summarizeBy: none
+		sourceColumn: races.circuit_id
 
 		annotation SummarizationSetBy = Automatic
 
@@ -74,9 +74,10 @@ table races
 				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type with Locale",{"raceId", "year", "round", "circuitId", "name", "date"}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"raceId", "race_id"}, {"circuitId", "circuit_id"}, {"name", "grand_prix"}}),
 				    #"Sorted Rows" = Table.Sort(#"Renamed Columns",{{"year", Order.Descending}, {"round", Order.Ascending}}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Sorted Rows","Grand Prix","GP",Replacer.ReplaceText,{"grand_prix"})
+				    #"Replaced Value" = Table.ReplaceValue(#"Sorted Rows","Grand Prix","GP",Replacer.ReplaceText,{"grand_prix"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Replaced Value",{{"race_id", "races.race_id"}, {"circuit_id", "races.circuit_id"}})
 				in
-				    #"Replaced Value"
+				    #"Renamed Columns1"
 
 	annotation PBI_NavigationStepName = Navigation
 

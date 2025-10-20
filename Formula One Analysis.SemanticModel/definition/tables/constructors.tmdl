@@ -1,12 +1,12 @@
 table constructors
 	lineageTag: 1fb70dec-2848-4770-a0b1-a04783be71cd
 
-	column constructor_id
+	column 'constructors.constructor_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: 1a97057e-2c54-436c-aed4-4db7c2f2439e
-		summarizeBy: sum
-		sourceColumn: constructor_id
+		summarizeBy: none
+		sourceColumn: constructors.constructor_id
 
 		annotation SummarizationSetBy = Automatic
 
@@ -34,7 +34,7 @@ table constructors
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"constructorId", Int64.Type}, {"constructorRef", type text}, {"name", type text}, {"nationality", type text}, {"url", type text}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"constructorRef", "url"}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"constructorId", "constructor_id"}, {"name", "constructor_name"}, {"nationality", "constructor_nationality"}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"constructorId", "constructors.constructor_id"}, {"name", "constructor_name"}, {"nationality", "constructor_nationality"}})
 				in
 				    #"Renamed Columns"
 

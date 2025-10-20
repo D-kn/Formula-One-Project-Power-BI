@@ -1,12 +1,12 @@
 table circuits
 	lineageTag: 7fc7fd11-7c32-407a-a887-4fedb94df5cc
 
-	column circuit_id
+	column 'circuits.circuit_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: f864ebab-cbd6-404b-89da-87b89a0244a3
-		summarizeBy: sum
-		sourceColumn: circuit_id
+		summarizeBy: none
+		sourceColumn: circuits.circuit_id
 
 		annotation SummarizationSetBy = Automatic
 
@@ -45,7 +45,7 @@ table circuits
 	column latitude
 		dataType: double
 		lineageTag: b2108bd1-2613-4268-a416-b46351366b16
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: latitude
 
 		annotation SummarizationSetBy = Automatic
@@ -55,7 +55,7 @@ table circuits
 	column longitude
 		dataType: double
 		lineageTag: 2989f390-6b13-4d84-b21e-cab38a028796
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: longitude
 
 		annotation SummarizationSetBy = Automatic
@@ -74,7 +74,7 @@ table circuits
 				    #"Promoted Headers" = Table.PromoteHeaders(#"Transposed Table", [PromoteAllScalars=true]),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"circuitId", Int64.Type}, {"circuitRef", type text}, {"name", type text}, {"location", type text}, {"country", type text}, {"lat", type number}, {"lng", type number}, {"alt", type text}, {"url", type text}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"alt", "url"}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"circuitId", "circuit_id"}, {"circuitRef", "circuit_ref"}, {"name", "circuit_name"}, {"location", "city"}, {"lat", "latitude"}, {"lng", "longitude"}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"circuitId", "circuits.circuit_id"}, {"circuitRef", "circuit_ref"}, {"name", "circuit_name"}, {"location", "city"}, {"lat", "latitude"}, {"lng", "longitude"}})
 				in
 				    #"Renamed Columns"
 

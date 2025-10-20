@@ -1,12 +1,12 @@
 table drivers
 	lineageTag: 214c875f-1929-4da6-b31b-94fd159b1c11
 
-	column driver_id
+	column 'drivers.driver_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: 80c64cbb-81f3-44bc-9680-9ce4485e4fcd
-		summarizeBy: sum
-		sourceColumn: driver_id
+		summarizeBy: none
+		sourceColumn: drivers.driver_id
 
 		annotation SummarizationSetBy = Automatic
 
@@ -61,9 +61,10 @@ table drivers
 				    #"Merged Columns" = Table.CombineColumns(#"Removed Columns",{"forename", "surname"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"Merged"),
 				    #"Renamed Columns" = Table.RenameColumns(#"Merged Columns",{{"driverId", "driver_id"}, {"number", "driver_number"}, {"Merged", "driver_name"}, {"dob", "driver_dob"}, {"nationality", "driver_nationality"}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","\N",null,Replacer.ReplaceValue,{"driver_id", "driver_number", "driver_name", "driver_dob", "driver_nationality"}),
-				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Replaced Value", {{"driver_dob", type date}}, "en-GB")
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Replaced Value", {{"driver_dob", type date}}, "en-GB"),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type with Locale",{{"driver_id", "drivers.driver_id"}})
 				in
-				    #"Changed Type with Locale"
+				    #"Renamed Columns1"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -1,39 +1,39 @@
 table results
 	lineageTag: 9d00a7f3-5ecd-4198-a42f-7c79006cc6fd
 
-	column result_id
+	column 'results.result_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: aba1a504-ea90-4d67-a93f-4e4381a20ecb
 		summarizeBy: sum
-		sourceColumn: result_id
+		sourceColumn: results.result_id
 
 		annotation SummarizationSetBy = Automatic
 
-	column race_id
+	column 'results.race_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: 996b4094-d9c0-4f05-ad02-ad6d849f7209
-		summarizeBy: sum
-		sourceColumn: race_id
+		summarizeBy: none
+		sourceColumn: results.race_id
 
 		annotation SummarizationSetBy = Automatic
 
-	column driver_id
+	column 'results.driver_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: fad2fb4d-3fcb-49ef-bd3a-d89648ae24d5
-		summarizeBy: sum
-		sourceColumn: driver_id
+		summarizeBy: none
+		sourceColumn: results.driver_id
 
 		annotation SummarizationSetBy = Automatic
 
-	column constructor_id
+	column 'results.constructor_id'
 		dataType: int64
 		formatString: 0
 		lineageTag: 49519d7c-b239-459e-a852-2887547398e7
-		summarizeBy: sum
-		sourceColumn: constructor_id
+		summarizeBy: none
+		sourceColumn: results.constructor_id
 
 		annotation SummarizationSetBy = Automatic
 
@@ -83,9 +83,10 @@ table results
 				    #"Removed Other Columns" = Table.SelectColumns(#"Promoted Headers",{"resultId", "raceId", "driverId", "constructorId", "number", "grid", "positionOrder", "points"}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"resultId", "result_id"}, {"raceId", "race_id"}, {"driverId", "driver_id"}, {"constructorId", "constructor_id"}, {"number", "driver_number"}, {"grid", "grid_position"}, {"positionOrder", "finish_position"}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","\N",null,Replacer.ReplaceValue,{"driver_number"}),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"result_id", Int64.Type}, {"race_id", Int64.Type}, {"driver_id", Int64.Type}, {"constructor_id", Int64.Type}, {"driver_number", Int64.Type}, {"grid_position", Int64.Type}, {"finish_position", Int64.Type}, {"points", type number}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"result_id", Int64.Type}, {"race_id", Int64.Type}, {"driver_id", Int64.Type}, {"constructor_id", Int64.Type}, {"driver_number", Int64.Type}, {"grid_position", Int64.Type}, {"finish_position", Int64.Type}, {"points", type number}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"result_id", "results.result_id"}, {"race_id", "results.race_id"}, {"driver_id", "results.driver_id"}, {"constructor_id", "results.constructor_id"}})
 				in
-				    #"Changed Type"
+				    #"Renamed Columns1"
 
 	annotation PBI_NavigationStepName = Navigation
 
