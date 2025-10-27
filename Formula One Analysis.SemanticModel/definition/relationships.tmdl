@@ -14,14 +14,17 @@ relationship 5d4ddc8d-86e2-5425-9f02-80297a53aa6a
 	toColumn: drivers.'drivers.driver_id'
 
 relationship 267b6288-212b-6126-9a68-3df3c7db0c82
+	crossFilteringBehavior: bothDirections
 	fromColumn: results.'results.race_id'
 	toColumn: races.'races.race_id'
 
 relationship f37314f8-bf30-46e3-31bc-64094b07028d
+	crossFilteringBehavior: bothDirections
 	fromColumn: races.'races.circuit_id'
 	toColumn: circuits.'circuits.circuit_id'
 
 relationship 1c93e508-401f-6977-d265-a5534fda38dc
+	crossFilteringBehavior: bothDirections
 	fromColumn: results.'results.constructor_id'
 	toColumn: constructors.'constructors.constructor_id'
 
