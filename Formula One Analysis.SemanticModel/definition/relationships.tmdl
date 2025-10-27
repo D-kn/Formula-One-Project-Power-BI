@@ -18,7 +18,6 @@ relationship 267b6288-212b-6126-9a68-3df3c7db0c82
 	toColumn: races.'races.race_id'
 
 relationship f37314f8-bf30-46e3-31bc-64094b07028d
-	crossFilteringBehavior: bothDirections
 	fromColumn: races.'races.circuit_id'
 	toColumn: circuits.'circuits.circuit_id'
 
