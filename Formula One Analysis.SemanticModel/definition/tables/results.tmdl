@@ -84,9 +84,10 @@ table results
 				    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"resultId", "result_id"}, {"raceId", "race_id"}, {"driverId", "driver_id"}, {"constructorId", "constructor_id"}, {"number", "driver_number"}, {"grid", "grid_position"}, {"positionOrder", "finish_position"}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","\N",null,Replacer.ReplaceValue,{"driver_number"}),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"result_id", Int64.Type}, {"race_id", Int64.Type}, {"driver_id", Int64.Type}, {"constructor_id", Int64.Type}, {"driver_number", Int64.Type}, {"grid_position", Int64.Type}, {"finish_position", Int64.Type}, {"points", type number}}),
-				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"result_id", "results.result_id"}, {"race_id", "results.race_id"}, {"driver_id", "results.driver_id"}, {"constructor_id", "results.constructor_id"}})
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"result_id", "results.result_id"}, {"race_id", "results.race_id"}, {"driver_id", "results.driver_id"}, {"constructor_id", "results.constructor_id"}}),
+				    #"Removed Blank Rows" = Table.SelectRows(#"Renamed Columns1", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
 				in
-				    #"Renamed Columns1"
+				    #"Removed Blank Rows"
 
 	annotation PBI_NavigationStepName = Navigation
 

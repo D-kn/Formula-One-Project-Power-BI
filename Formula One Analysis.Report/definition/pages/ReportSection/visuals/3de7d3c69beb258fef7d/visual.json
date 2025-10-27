@@ -1,0 +1,210 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "3de7d3c69beb258fef7d",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 644.94212633377447,
+    "width": 639.453257173487
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "results"
+                        }
+                      },
+                      "Property": "finish_position"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(results.finish_position)",
+              "nativeQueryRef": "finish_position"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "drivers"
+                    }
+                  },
+                  "Property": "driver_name"
+                }
+              },
+              "queryRef": "drivers.driver_name",
+              "nativeQueryRef": "driver_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "drivers"
+                    }
+                  },
+                  "Property": "driver_nationality"
+                }
+              },
+              "queryRef": "drivers.driver_nationality",
+              "nativeQueryRef": "driver_nationality"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "constructors"
+                    }
+                  },
+                  "Property": "constructor_name"
+                }
+              },
+              "queryRef": "constructors.constructor_name",
+              "nativeQueryRef": "cars",
+              "displayName": "cars"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "results"
+                        }
+                      },
+                      "Property": "points"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(results.points)",
+              "nativeQueryRef": "points"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "results"
+                      }
+                    },
+                    "Property": "finish_position"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3373dc01faedef6948a1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "results"
+                  }
+                },
+                "Property": "finish_position"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3768878c161be28bf5bd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "drivers"
+              }
+            },
+            "Property": "driver_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9ee4e97206d72f3cdd6f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "drivers"
+              }
+            },
+            "Property": "driver_nationality"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "815f7814b5ce379798ea",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "constructors"
+              }
+            },
+            "Property": "constructor_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bbd22fbe57b94227f92c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "results"
+                  }
+                },
+                "Property": "points"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

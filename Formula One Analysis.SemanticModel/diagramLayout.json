@@ -10,56 +10,60 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 386.99664429530191,
+            "y": 169.17281879194633
           },
           "nodeIndex": "races",
+          "nodeLineageTag": "04bf7442-45cb-48b8-bc39-a21aadaaa102",
           "size": {
             "height": 224,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 331.7,
-            "y": 0
-          },
-          "nodeIndex": "circuits",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 2
-        },
-        {
-          "location": {
-            "x": 727.9,
-            "y": 0
-          },
-          "nodeIndex": "drivers",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 180.79999999999995,
-            "y": 357
-          },
-          "nodeIndex": "constructors",
-          "size": {
-            "height": 152,
             "width": 234
           },
           "zIndex": 4
         },
         {
           "location": {
-            "x": 575.09999999999991,
-            "y": 228
+            "x": 23.208389261744941,
+            "y": 154.79865771812081
+          },
+          "nodeIndex": "circuits",
+          "nodeLineageTag": "7fc7fd11-7c32-407a-a887-4fedb94df5cc",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 746.69697986577182,
+            "y": 352.71979865771812
+          },
+          "nodeIndex": "drivers",
+          "nodeLineageTag": "214c875f-1929-4da6-b31b-94fd159b1c11",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1192.5197986577182,
+            "y": 51.825503355704654
+          },
+          "nodeIndex": "constructors",
+          "nodeLineageTag": "1fb70dec-2848-4770-a0b1-a04783be71cd",
+          "size": {
+            "height": 184.06543624161071,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 742.061409395973,
+            "y": 0
           },
           "nodeIndex": "results",
           "nodeLineageTag": "9d00a7f3-5ecd-4198-a42f-7c79006cc6fd",
