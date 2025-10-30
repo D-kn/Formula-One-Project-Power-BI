@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "ReportSection",
-  "displayName": "Treemaps",
+  "name": "5bd1ac9f87739321009b",
+  "displayName": "Decomp Tree",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280
