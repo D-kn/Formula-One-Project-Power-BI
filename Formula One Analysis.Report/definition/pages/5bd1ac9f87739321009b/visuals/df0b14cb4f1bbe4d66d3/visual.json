@@ -6,7 +6,7 @@
     "y": 0,
     "z": 0,
     "height": 720.695652173913,
-    "width": 1280
+    "width": 602.43478260869563
   },
   "visual": {
     "visualType": "decompositionTreeVisual",
@@ -141,7 +141,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Mercedes'"
+                    "Value": "'McLaren'"
                   }
                 }
               ],
@@ -208,7 +208,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'Mercedes'"
+                        "Value": "'McLaren'"
                       }
                     }
                   }
@@ -242,56 +242,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c84c7961886277087147",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "results"
-                  }
-                },
-                "Property": "points"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4fc6e85b917b352c0dcd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "drivers"
-              }
-            },
-            "Property": "driver_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0bc15ff037676f978102",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "constructors"
-              }
-            },
-            "Property": "constructor_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

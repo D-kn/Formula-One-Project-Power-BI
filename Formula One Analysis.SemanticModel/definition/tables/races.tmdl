@@ -3,10 +3,13 @@ table races
 
 	column 'races.race_id'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: ae835b5a-04c8-4744-8455-f2fd3fa880e4
 		summarizeBy: none
 		sourceColumn: races.race_id
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -21,19 +24,25 @@ table races
 
 	column round
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 86a82ccd-1f44-4898-817b-03b8002a3d05
 		summarizeBy: sum
 		sourceColumn: round
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column 'races.circuit_id'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: bf289b7a-9055-44d7-a03c-42226bb0ef15
 		summarizeBy: none
 		sourceColumn: races.circuit_id
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

@@ -28,6 +28,7 @@ table drivers
 
 	column driver_dob
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 4496955f-3bed-4e61-b904-d8d3509e3318
 		summarizeBy: none
@@ -37,6 +38,8 @@ table drivers
 			isDefault
 			relationship: ad16ab6b-30c5-41d6-be2e-43f0c4480b6f
 			defaultHierarchy: LocalDateTable_742fac51-a919-44ed-89a3-0a9adf47abe7.'Date Hierarchy'
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

@@ -3,10 +3,13 @@ table circuits
 
 	column 'circuits.circuit_id'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: f864ebab-cbd6-404b-89da-87b89a0244a3
 		summarizeBy: none
 		sourceColumn: circuits.circuit_id
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

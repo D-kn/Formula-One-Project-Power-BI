@@ -10,7 +10,7 @@ annotation PBI_QueryOrder = ["SourceFiles","races","circuits","drivers","constru
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 ref table races
 ref table DateTableTemplate_2594c50e-ee1d-4057-939b-73d024622586

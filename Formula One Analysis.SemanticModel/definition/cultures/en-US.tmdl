@@ -128,6 +128,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "races.race_id": {
@@ -178,6 +181,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "round": {
@@ -685,6 +691,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "circuits.circuit_id": {
@@ -1340,6 +1349,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "Driver": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "NameType": "Name"
@@ -1352,6 +1371,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver dob": {
@@ -1454,6 +1476,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver dob date hierarchy": {
@@ -1480,6 +1505,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver dob year": {
@@ -1595,6 +1623,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver dob quarter": {
@@ -1710,6 +1741,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver dob month": {
@@ -1825,6 +1859,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver dob day": {
@@ -2281,6 +2318,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "results.result_id": {
@@ -2382,6 +2422,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "driver number": {
@@ -2415,6 +2458,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "grid position": {
@@ -2780,251 +2826,408 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "result.race_win": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "results",
+			          "ConceptualProperty": "race_wins"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "race win": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "race_wins": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "win": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "race success": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "race landslide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "race conquest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "success": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "landslide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "conquest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "race victory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "race triumph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "victory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "triumph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "result.race_podium": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "results",
+			          "ConceptualProperty": "race_podium"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "race podium": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "race_podium": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "podium": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "race dais": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "race platform": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "race plinth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "race lectern": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dais": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "platform": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "plinth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lectern": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "race stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "race pedestal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "result.total_point_adjusted": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "results",
+			          "ConceptualProperty": "total_points_adjusted"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total point adjusted": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_points_adjusted": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate point adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall point adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total opinion adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total fact adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total idea adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total argument adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total topic adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total theme adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total outlet adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "total socket adjusted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "circuit_is_named_circuit_name": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.circuit_name": {
-			          "Target": {
-			            "Entity": "circuit.circuit_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Name": {
-			              "Role": "circuit.circuit_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuit_names_are_names_IDs_of_circuits"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.circuit_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_circuit_names"
-			        }
-			      ]
-			    },
-			    "driver_is_named_driver_name": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
-			        },
-			        "driver.driver_name": {
-			          "Target": {
-			            "Entity": "driver.driver_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Name": {
-			              "Role": "driver.driver_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "driver_names_are_names_IDs_of_drivers"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "drivers_have_driver_names"
-			        }
-			      ]
-			    },
-			    "constructor_is_named_constructor_name": {
-			      "Binding": {
-			        "ConceptualEntity": "constructors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "constructor": {
-			          "Target": {
-			            "Entity": "constructor"
-			          }
-			        },
-			        "constructor.constructor_name": {
-			          "Target": {
-			            "Entity": "constructor.constructor_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "constructor"
-			            },
-			            "Name": {
-			              "Role": "constructor.constructor_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "constructor_names_are_names_IDs_of_constructors"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "constructor"
-			            },
-			            "Object": {
-			              "Role": "constructor.constructor_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "constructors_have_constructor_names"
-			        }
-			      ]
-			    },
-			    "driver_drive_result": {
+			    "result_has_constructor": {
 			      "Binding": {
 			        "ConceptualEntity": "results"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
-			        },
 			        "result": {
 			          "Target": {
 			            "Entity": "result"
 			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Verb": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Verbs": [
-			              {
-			                "drive": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "result"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.75,
-			          "ID": "drivers_drive_results"
 			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "result"
-			            },
-			            "Object": {
-			              "Role": "driver"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "results_have_drivers"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Object": {
-			              "Role": "result"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "drivers_have_results"
-			        }
-			      ]
-			    },
-			    "constructor_construct_result": {
-			      "Binding": {
-			        "ConceptualEntity": "results"
-			      },
-			      "State": "Generated",
-			      "Roles": {
 			        "constructor": {
 			          "Target": {
 			            "Entity": "constructor"
 			          }
-			        },
-			        "result": {
-			          "Target": {
-			            "Entity": "result"
-			          }
 			        }
 			      },
 			      "Phrasings": [
-			        {
-			          "Verb": {
-			            "Subject": {
-			              "Role": "constructor"
-			            },
-			            "Verbs": [
-			              {
-			                "construct": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "result"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.75,
-			          "ID": "constructors_construct_results"
-			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
@@ -3050,864 +3253,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "constructors_have_results"
-			        }
-			      ]
-			    },
-			    "driver_is_born_on_driver_dob": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
 			        },
-			        "driver.driver_dob": {
-			          "Target": {
-			            "Entity": "driver.driver_dob"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "When": {
-			          "Role": "driver.driver_dob"
-			        }
-			      },
-			      "Phrasings": [
 			        {
 			          "Verb": {
+			            "Subject": {
+			              "Role": "constructor"
+			            },
 			            "Verbs": [
 			              {
-			                "bear": {
+			                "construct": {
 			                  "State": "Generated"
 			                }
 			              }
 			            ],
 			            "Object": {
-			              "Role": "driver"
+			              "Role": "result"
 			            }
 			          },
 			          "State": "Generated",
-			          "Weight": 0.9,
-			          "ID": "drivers_are_born_on_driver_dob"
+			          "Weight": 0.75,
+			          "ID": "constructors_construct_results"
 			        }
 			      ]
 			    },
-			    "circuit_in_city": {
+			    "result_has_race": {
 			      "Binding": {
-			        "ConceptualEntity": "circuits"
+			        "ConceptualEntity": "results"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "circuit": {
+			        "result": {
 			          "Target": {
-			            "Entity": "circuit"
+			            "Entity": "result"
 			          }
 			        },
-			        "circuit.city": {
+			        "race": {
 			          "Target": {
-			            "Entity": "circuit.city"
+			            "Entity": "race"
 			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "circuit.city"
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Preposition": {
+			          "Attribute": {
 			            "Subject": {
-			              "Role": "circuit"
+			              "Role": "result"
 			            },
-			            "Prepositions": [
+			            "Object": {
+			              "Role": "race"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "results_have_races"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "race"
+			            },
+			            "Object": {
+			              "Role": "result"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "races_have_results"
+			        }
+			      ]
+			    },
+			    "result_has_driver": {
+			      "Binding": {
+			        "ConceptualEntity": "results"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "result": {
+			          "Target": {
+			            "Entity": "result"
+			          }
+			        },
+			        "driver": {
+			          "Target": {
+			            "Entity": "driver"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "result"
+			            },
+			            "Object": {
+			              "Role": "driver"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "results_have_drivers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Object": {
+			              "Role": "result"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "drivers_have_results"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Verbs": [
 			              {
-			                "in": {
+			                "drive": {
 			                  "State": "Generated"
 			                }
 			              }
 			            ],
 			            "Object": {
-			              "Role": "circuit.city"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_are_in_cities"
-			        }
-			      ]
-			    },
-			    "circuit_in_country": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.country": {
-			          "Target": {
-			            "Entity": "circuit.country"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "circuit.country"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "circuit.country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_are_in_countries"
-			        }
-			      ]
-			    },
-			    "race_has_races_race_id": {
-			      "Binding": {
-			        "ConceptualEntity": "races"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "race": {
-			          "Target": {
-			            "Entity": "race"
-			          }
-			        },
-			        "race.races_race_id": {
-			          "Target": {
-			            "Entity": "race.races_race_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "race"
-			            },
-			            "Object": {
-			              "Role": "race.races_race_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "races_have_races_race_ids"
-			        }
-			      ]
-			    },
-			    "race_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "races"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "race": {
-			          "Target": {
-			            "Entity": "race"
-			          }
-			        },
-			        "race.year": {
-			          "Target": {
-			            "Entity": "race.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "race"
-			            },
-			            "Object": {
-			              "Role": "race.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "races_have_years"
-			        }
-			      ]
-			    },
-			    "race_has_round": {
-			      "Binding": {
-			        "ConceptualEntity": "races"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "race": {
-			          "Target": {
-			            "Entity": "race"
-			          }
-			        },
-			        "race.round": {
-			          "Target": {
-			            "Entity": "race.round"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "race"
-			            },
-			            "Object": {
-			              "Role": "race.round"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "races_have_round"
-			        }
-			      ]
-			    },
-			    "race_has_grand_prix": {
-			      "Binding": {
-			        "ConceptualEntity": "races"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "race": {
-			          "Target": {
-			            "Entity": "race"
-			          }
-			        },
-			        "race.grand_prix": {
-			          "Target": {
-			            "Entity": "race.grand_prix"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "race"
-			            },
-			            "Object": {
-			              "Role": "race.grand_prix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "races_have_grand_prix"
-			        }
-			      ]
-			    },
-			    "race_has_date": {
-			      "Binding": {
-			        "ConceptualEntity": "races"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "race": {
-			          "Target": {
-			            "Entity": "race"
-			          }
-			        },
-			        "race.date": {
-			          "Target": {
-			            "Entity": "race.date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "race"
-			            },
-			            "Object": {
-			              "Role": "race.date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "races_have_dates"
-			        }
-			      ]
-			    },
-			    "circuit_has_circuits_circuit_id": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.circuits_circuit_id": {
-			          "Target": {
-			            "Entity": "circuit.circuits_circuit_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.circuits_circuit_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_circuits_circuit_ids"
-			        }
-			      ]
-			    },
-			    "circuit_has_circuit_ref": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.circuit_ref": {
-			          "Target": {
-			            "Entity": "circuit.circuit_ref"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.circuit_ref"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_circuit_refs"
-			        }
-			      ]
-			    },
-			    "circuit_has_city": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.city": {
-			          "Target": {
-			            "Entity": "circuit.city"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.city"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_cities"
-			        }
-			      ]
-			    },
-			    "circuit_has_country": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.country": {
-			          "Target": {
-			            "Entity": "circuit.country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_countries"
-			        }
-			      ]
-			    },
-			    "circuit_has_latitude": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.latitude": {
-			          "Target": {
-			            "Entity": "circuit.latitude"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.latitude"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_latitudes"
-			        }
-			      ]
-			    },
-			    "circuit_has_longitude": {
-			      "Binding": {
-			        "ConceptualEntity": "circuits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "circuit": {
-			          "Target": {
-			            "Entity": "circuit"
-			          }
-			        },
-			        "circuit.longitude": {
-			          "Target": {
-			            "Entity": "circuit.longitude"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "circuit"
-			            },
-			            "Object": {
-			              "Role": "circuit.longitude"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "circuits_have_longitudes"
-			        }
-			      ]
-			    },
-			    "driver_has_drivers_driver_id": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
-			        },
-			        "driver.drivers_driver_id": {
-			          "Target": {
-			            "Entity": "driver.drivers_driver_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Object": {
-			              "Role": "driver.drivers_driver_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "drivers_have_drivers_driver_ids"
-			        }
-			      ]
-			    },
-			    "driver_has_driver_number": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
-			        },
-			        "driver.driver_number": {
-			          "Target": {
-			            "Entity": "driver.driver_number"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_number"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "drivers_have_driver_numbers"
-			        }
-			      ]
-			    },
-			    "driver_has_driver_dob": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
-			        },
-			        "driver.driver_dob": {
-			          "Target": {
-			            "Entity": "driver.driver_dob"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_dob"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "drivers_have_driver_dob"
-			        }
-			      ]
-			    },
-			    "driver_has_driver_nationality": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver": {
-			          "Target": {
-			            "Entity": "driver"
-			          }
-			        },
-			        "driver.driver_nationality": {
-			          "Target": {
-			            "Entity": "driver.driver_nationality"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_nationality"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "drivers_have_driver_nationalities"
-			        }
-			      ]
-			    },
-			    "constructor_has_constructors_constructor_id": {
-			      "Binding": {
-			        "ConceptualEntity": "constructors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "constructor": {
-			          "Target": {
-			            "Entity": "constructor"
-			          }
-			        },
-			        "constructor.constructors_constructor_id": {
-			          "Target": {
-			            "Entity": "constructor.constructors_constructor_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "constructor"
-			            },
-			            "Object": {
-			              "Role": "constructor.constructors_constructor_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "constructors_have_constructors_constructor_ids"
-			        }
-			      ]
-			    },
-			    "constructor_has_constructor_nationality": {
-			      "Binding": {
-			        "ConceptualEntity": "constructors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "constructor": {
-			          "Target": {
-			            "Entity": "constructor"
-			          }
-			        },
-			        "constructor.constructor_nationality": {
-			          "Target": {
-			            "Entity": "constructor.constructor_nationality"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "constructor"
-			            },
-			            "Object": {
-			              "Role": "constructor.constructor_nationality"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "constructors_have_constructor_nationalities"
-			        }
-			      ]
-			    },
-			    "result_has_results_result_id": {
-			      "Binding": {
-			        "ConceptualEntity": "results"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "result": {
-			          "Target": {
-			            "Entity": "result"
-			          }
-			        },
-			        "result.results_result_id": {
-			          "Target": {
-			            "Entity": "result.results_result_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
 			              "Role": "result"
-			            },
-			            "Object": {
-			              "Role": "result.results_result_id"
 			            }
 			          },
 			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "results_have_results_result_ids"
-			        }
-			      ]
-			    },
-			    "result_has_driver_number": {
-			      "Binding": {
-			        "ConceptualEntity": "results"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "result": {
-			          "Target": {
-			            "Entity": "result"
-			          }
-			        },
-			        "result.driver_number": {
-			          "Target": {
-			            "Entity": "result.driver_number"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "result"
-			            },
-			            "Object": {
-			              "Role": "result.driver_number"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "results_have_driver_numbers"
-			        }
-			      ]
-			    },
-			    "result_has_grid_position": {
-			      "Binding": {
-			        "ConceptualEntity": "results"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "result": {
-			          "Target": {
-			            "Entity": "result"
-			          }
-			        },
-			        "result.grid_position": {
-			          "Target": {
-			            "Entity": "result.grid_position"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "result"
-			            },
-			            "Object": {
-			              "Role": "result.grid_position"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "results_have_grid_positions"
-			        }
-			      ]
-			    },
-			    "result_has_finish_position": {
-			      "Binding": {
-			        "ConceptualEntity": "results"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "result": {
-			          "Target": {
-			            "Entity": "result"
-			          }
-			        },
-			        "result.finish_position": {
-			          "Target": {
-			            "Entity": "result.finish_position"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "result"
-			            },
-			            "Object": {
-			              "Role": "result.finish_position"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "results_have_finish_positions"
-			        }
-			      ]
-			    },
-			    "result_has_point": {
-			      "Binding": {
-			        "ConceptualEntity": "results"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "result": {
-			          "Target": {
-			            "Entity": "result"
-			          }
-			        },
-			        "result.point": {
-			          "Target": {
-			            "Entity": "result.point"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "result"
-			            },
-			            "Object": {
-			              "Role": "result.point"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "results_have_points"
+			          "Weight": 0.75,
+			          "ID": "drivers_drive_results"
 			        }
 			      ]
 			    },
@@ -3957,7 +3434,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "result_has_race": {
+			    "result_has_total_point_adjusted": {
 			      "Binding": {
 			        "ConceptualEntity": "results"
 			      },
@@ -3968,9 +3445,9 @@ cultureInfo en-US
 			            "Entity": "result"
 			          }
 			        },
-			        "race": {
+			        "result.total_point_adjusted": {
 			          "Target": {
-			            "Entity": "race"
+			            "Entity": "result.total_point_adjusted"
 			          }
 			        }
 			      },
@@ -3981,25 +3458,801 @@ cultureInfo en-US
 			              "Role": "result"
 			            },
 			            "Object": {
-			              "Role": "race"
+			              "Role": "result.total_point_adjusted"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "results_have_races"
+			          "ID": "results_have_total_point_adjusted"
+			        }
+			      ]
+			    },
+			    "result_has_race_podium": {
+			      "Binding": {
+			        "ConceptualEntity": "results"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "result": {
+			          "Target": {
+			            "Entity": "result"
+			          }
 			        },
+			        "result.race_podium": {
+			          "Target": {
+			            "Entity": "result.race_podium"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "result"
+			            },
+			            "Object": {
+			              "Role": "result.race_podium"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "results_have_race_podia"
+			        }
+			      ]
+			    },
+			    "result_has_race_win": {
+			      "Binding": {
+			        "ConceptualEntity": "results"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "result": {
+			          "Target": {
+			            "Entity": "result"
+			          }
+			        },
+			        "result.race_win": {
+			          "Target": {
+			            "Entity": "result.race_win"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "result"
+			            },
+			            "Object": {
+			              "Role": "result.race_win"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "results_have_race_wins"
+			        }
+			      ]
+			    },
+			    "result_has_point": {
+			      "Binding": {
+			        "ConceptualEntity": "results"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "result": {
+			          "Target": {
+			            "Entity": "result"
+			          }
+			        },
+			        "result.point": {
+			          "Target": {
+			            "Entity": "result.point"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "result"
+			            },
+			            "Object": {
+			              "Role": "result.point"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "results_have_points"
+			        }
+			      ]
+			    },
+			    "result_has_finish_position": {
+			      "Binding": {
+			        "ConceptualEntity": "results"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "result": {
+			          "Target": {
+			            "Entity": "result"
+			          }
+			        },
+			        "result.finish_position": {
+			          "Target": {
+			            "Entity": "result.finish_position"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "result"
+			            },
+			            "Object": {
+			              "Role": "result.finish_position"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "results_have_finish_positions"
+			        }
+			      ]
+			    },
+			    "constructor_has_constructor_nationality": {
+			      "Binding": {
+			        "ConceptualEntity": "constructors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "constructor": {
+			          "Target": {
+			            "Entity": "constructor"
+			          }
+			        },
+			        "constructor.constructor_nationality": {
+			          "Target": {
+			            "Entity": "constructor.constructor_nationality"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "constructor"
+			            },
+			            "Object": {
+			              "Role": "constructor.constructor_nationality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "constructors_have_constructor_nationalities"
+			        }
+			      ]
+			    },
+			    "constructor_has_constructor_name": {
+			      "Binding": {
+			        "ConceptualEntity": "constructors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "constructor": {
+			          "Target": {
+			            "Entity": "constructor"
+			          }
+			        },
+			        "constructor.constructor_name": {
+			          "Target": {
+			            "Entity": "constructor.constructor_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "constructor"
+			            },
+			            "Object": {
+			              "Role": "constructor.constructor_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "constructors_have_constructor_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "constructor"
+			            },
+			            "Name": {
+			              "Role": "constructor.constructor_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "constructor_names_are_names_IDs_of_constructors"
+			        }
+			      ]
+			    },
+			    "constructor_has_constructors_constructor_id": {
+			      "Binding": {
+			        "ConceptualEntity": "constructors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "constructor": {
+			          "Target": {
+			            "Entity": "constructor"
+			          }
+			        },
+			        "constructor.constructors_constructor_id": {
+			          "Target": {
+			            "Entity": "constructor.constructors_constructor_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "constructor"
+			            },
+			            "Object": {
+			              "Role": "constructor.constructors_constructor_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "constructors_have_constructors_constructor_ids"
+			        }
+			      ]
+			    },
+			    "driver_has_driver_nationality": {
+			      "Binding": {
+			        "ConceptualEntity": "drivers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "driver": {
+			          "Target": {
+			            "Entity": "driver"
+			          }
+			        },
+			        "driver.driver_nationality": {
+			          "Target": {
+			            "Entity": "driver.driver_nationality"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Object": {
+			              "Role": "driver.driver_nationality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "drivers_have_driver_nationalities"
+			        }
+			      ]
+			    },
+			    "driver_has_driver_name": {
+			      "Binding": {
+			        "ConceptualEntity": "drivers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "driver": {
+			          "Target": {
+			            "Entity": "driver"
+			          }
+			        },
+			        "driver.driver_name": {
+			          "Target": {
+			            "Entity": "driver.driver_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Object": {
+			              "Role": "driver.driver_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "drivers_have_driver_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Name": {
+			              "Role": "driver.driver_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "driver_names_are_names_IDs_of_drivers"
+			        }
+			      ]
+			    },
+			    "driver_has_driver_number": {
+			      "Binding": {
+			        "ConceptualEntity": "drivers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "driver": {
+			          "Target": {
+			            "Entity": "driver"
+			          }
+			        },
+			        "driver.driver_number": {
+			          "Target": {
+			            "Entity": "driver.driver_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Object": {
+			              "Role": "driver.driver_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "drivers_have_driver_numbers"
+			        }
+			      ]
+			    },
+			    "driver_has_drivers_driver_id": {
+			      "Binding": {
+			        "ConceptualEntity": "drivers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "driver": {
+			          "Target": {
+			            "Entity": "driver"
+			          }
+			        },
+			        "driver.drivers_driver_id": {
+			          "Target": {
+			            "Entity": "driver.drivers_driver_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "driver"
+			            },
+			            "Object": {
+			              "Role": "driver.drivers_driver_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "drivers_have_drivers_driver_ids"
+			        }
+			      ]
+			    },
+			    "circuit_has_longitude": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.longitude": {
+			          "Target": {
+			            "Entity": "circuit.longitude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Object": {
+			              "Role": "circuit.longitude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_have_longitudes"
+			        }
+			      ]
+			    },
+			    "circuit_has_latitude": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.latitude": {
+			          "Target": {
+			            "Entity": "circuit.latitude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Object": {
+			              "Role": "circuit.latitude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_have_latitudes"
+			        }
+			      ]
+			    },
+			    "circuit_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.country": {
+			          "Target": {
+			            "Entity": "circuit.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Object": {
+			              "Role": "circuit.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_have_countries"
+			        }
+			      ]
+			    },
+			    "circuit_has_city": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.city": {
+			          "Target": {
+			            "Entity": "circuit.city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Object": {
+			              "Role": "circuit.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_have_cities"
+			        }
+			      ]
+			    },
+			    "circuit_has_circuit_name": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.circuit_name": {
+			          "Target": {
+			            "Entity": "circuit.circuit_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Object": {
+			              "Role": "circuit.circuit_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_have_circuit_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Name": {
+			              "Role": "circuit.circuit_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuit_names_are_names_IDs_of_circuits"
+			        }
+			      ]
+			    },
+			    "circuit_has_circuit_ref": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.circuit_ref": {
+			          "Target": {
+			            "Entity": "circuit.circuit_ref"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Object": {
+			              "Role": "circuit.circuit_ref"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_have_circuit_refs"
+			        }
+			      ]
+			    },
+			    "race_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "races"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "race": {
+			          "Target": {
+			            "Entity": "race"
+			          }
+			        },
+			        "race.date": {
+			          "Target": {
+			            "Entity": "race.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "race"
 			            },
 			            "Object": {
-			              "Role": "result"
+			              "Role": "race.date"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "races_have_results"
+			          "ID": "races_have_dates"
+			        }
+			      ]
+			    },
+			    "race_has_grand_prix": {
+			      "Binding": {
+			        "ConceptualEntity": "races"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "race": {
+			          "Target": {
+			            "Entity": "race"
+			          }
+			        },
+			        "race.grand_prix": {
+			          "Target": {
+			            "Entity": "race.grand_prix"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "race"
+			            },
+			            "Object": {
+			              "Role": "race.grand_prix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "races_have_grand_prix"
+			        }
+			      ]
+			    },
+			    "race_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "races"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "race": {
+			          "Target": {
+			            "Entity": "race"
+			          }
+			        },
+			        "race.year": {
+			          "Target": {
+			            "Entity": "race.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "race"
+			            },
+			            "Object": {
+			              "Role": "race.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "races_have_years"
+			        }
+			      ]
+			    },
+			    "circuit_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.country": {
+			          "Target": {
+			            "Entity": "circuit.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "circuit.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "circuit.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_are_in_countries"
+			        }
+			      ]
+			    },
+			    "circuit_in_city": {
+			      "Binding": {
+			        "ConceptualEntity": "circuits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "circuit": {
+			          "Target": {
+			            "Entity": "circuit"
+			          }
+			        },
+			        "circuit.city": {
+			          "Target": {
+			            "Entity": "circuit.city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "circuit.city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "circuit"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "circuit.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "circuits_are_in_cities"
 			        }
 			      ]
 			    },
@@ -4165,171 +4418,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "date_hierarchies_have_days"
-			        }
-			      ]
-			    },
-			    "driver_driver_dob_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver.driver_dob": {
-			          "Target": {
-			            "Entity": "driver.driver_dob"
-			          }
-			        },
-			        "driver.driver_dob.date_hierarchy": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver.driver_dob"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_dob.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "driver_dob_have_driver_dob_date_hierarchy"
-			        }
-			      ]
-			    },
-			    "driver_driver_dob_date_hierarchy_has_driver_driver_dob_year": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver.driver_dob.date_hierarchy": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.date_hierarchy"
-			          }
-			        },
-			        "driver.driver_dob.year": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver.driver_dob.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_dob.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "driver_dob_date_hierarchy_have_driver_dob_year"
-			        }
-			      ]
-			    },
-			    "driver_driver_dob_date_hierarchy_has_driver_driver_dob_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver.driver_dob.date_hierarchy": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.date_hierarchy"
-			          }
-			        },
-			        "driver.driver_dob.quarter": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver.driver_dob.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_dob.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "driver_dob_date_hierarchy_have_driver_dob_quarter"
-			        }
-			      ]
-			    },
-			    "driver_driver_dob_date_hierarchy_has_driver_driver_dob_month": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver.driver_dob.date_hierarchy": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.date_hierarchy"
-			          }
-			        },
-			        "driver.driver_dob.month": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver.driver_dob.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_dob.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "driver_dob_date_hierarchy_have_driver_dob_month"
-			        }
-			      ]
-			    },
-			    "driver_driver_dob_date_hierarchy_has_driver_driver_dob_day": {
-			      "Binding": {
-			        "ConceptualEntity": "drivers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "driver.driver_dob.date_hierarchy": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.date_hierarchy"
-			          }
-			        },
-			        "driver.driver_dob.day": {
-			          "Target": {
-			            "Entity": "driver.driver_dob.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "driver.driver_dob.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "driver.driver_dob.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "driver_dob_date_hierarchy_have_driver_dob_day"
 			        }
 			      ]
 			    }

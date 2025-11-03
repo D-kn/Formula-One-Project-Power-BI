@@ -16,10 +16,10 @@
           "nodeIndex": "races",
           "nodeLineageTag": "04bf7442-45cb-48b8-bc39-a21aadaaa102",
           "size": {
-            "height": 224,
+            "height": 225.1057046979866,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 5
         },
         {
           "location": {
@@ -29,10 +29,10 @@
           "nodeIndex": "circuits",
           "nodeLineageTag": "7fc7fd11-7c32-407a-a887-4fedb94df5cc",
           "size": {
-            "height": 248,
+            "height": 251.31711409395973,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -55,7 +55,7 @@
           "nodeIndex": "constructors",
           "nodeLineageTag": "1fb70dec-2848-4770-a0b1-a04783be71cd",
           "size": {
-            "height": 184.06543624161071,
+            "height": 159.739932885906,
             "width": 234
           },
           "zIndex": 2
@@ -71,7 +71,7 @@
             "height": 254,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 3
         }
       ],
       "name": "All tables",
