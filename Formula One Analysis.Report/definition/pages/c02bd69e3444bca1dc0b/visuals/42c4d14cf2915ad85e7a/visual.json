@@ -1,0 +1,337 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "42c4d14cf2915ad85e7a",
+  "position": {
+    "x": 10,
+    "y": 0,
+    "z": 0,
+    "height": 220,
+    "width": 280
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "races"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "races.year",
+              "nativeQueryRef": "Year",
+              "active": true,
+              "displayName": "Year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "results"
+                        }
+                      },
+                      "Property": "race_wins"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(results.race_wins)",
+              "nativeQueryRef": "Race Wins",
+              "displayName": "Race Wins"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "results"
+                      }
+                    },
+                    "Property": "race_wins"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "results"
+                                        }
+                                      },
+                                      "Property": "race_wins"
+                                    }
+                                  },
+                                  "Function": 0
+                                }
+                              },
+                              "Right": {
+                                "RangePercent": {
+                                  "Min": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Aggregation": {
+                                                  "Expression": {
+                                                    "Column": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "results"
+                                                        }
+                                                      },
+                                                      "Property": "race_wins"
+                                                    }
+                                                  },
+                                                  "Function": 0
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 3
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Max": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Aggregation": {
+                                                  "Expression": {
+                                                    "Column": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "results"
+                                                        }
+                                                      },
+                                                      "Property": "race_wins"
+                                                    }
+                                                  },
+                                                  "Function": 0
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 4
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Percent": 0.8
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#cccccc'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "results"
+                                        }
+                                      },
+                                      "Property": "race_wins"
+                                    }
+                                  },
+                                  "Function": 0
+                                }
+                              },
+                              "Right": {
+                                "RangePercent": {
+                                  "Min": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Aggregation": {
+                                                  "Expression": {
+                                                    "Column": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "results"
+                                                        }
+                                                      },
+                                                      "Property": "race_wins"
+                                                    }
+                                                  },
+                                                  "Function": 0
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 3
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Max": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Aggregation": {
+                                                  "Expression": {
+                                                    "Column": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "results"
+                                                        }
+                                                      },
+                                                      "Property": "race_wins"
+                                                    }
+                                                  },
+                                                  "Function": 0
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 4
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Percent": 0.8
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#7D0D29'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Race Wins by Year'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "c02bd69e3444bca1dc0b",
+  "displayName": "Tooltip Seasons",
+  "displayOption": "ActualSize",
+  "height": 240,
+  "width": 320,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d28b2f4fb67a42fdd3a5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "drivers"
+              }
+            },
+            "Property": "driver_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "f6a9f8636e91a025d0d2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "constructors"
+              }
+            },
+            "Property": "constructor_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "e6b162c4f3f53f12516d",
+    "type": "Tooltip",
+    "parameters": [
+      {
+        "name": "27504dae0327b8415463",
+        "boundFilter": "d28b2f4fb67a42fdd3a5",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "drivers"
+              }
+            },
+            "Property": "driver_name"
+          }
+        }
+      },
+      {
+        "name": "31acaa1e83b004b9369e",
+        "boundFilter": "f6a9f8636e91a025d0d2",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "constructors"
+              }
+            },
+            "Property": "constructor_name"
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "type": "Tooltip"
+}

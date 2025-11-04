@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -62,6 +62,22 @@
           "name": "AccessibleDefault",
           "path": "BuiltInThemes/AccessibleDefault.json",
           "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Formula_One_Car035452247288634386.jpg",
+          "path": "Formula_One_Car035452247288634386.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "F1_Logo.svg42471044832870297.png",
+          "path": "F1_Logo.svg42471044832870297.png",
+          "type": "Image"
         }
       ]
     }

@@ -1,0 +1,460 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "308179935c8556c59448",
+  "position": {
+    "x": 545.39130434782612,
+    "y": 324.17391304347825,
+    "z": 6000,
+    "height": 332.52173913043481,
+    "width": 690.08695652173913,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "drivers"
+                    }
+                  },
+                  "Property": "driver_name"
+                }
+              },
+              "queryRef": "drivers.driver_name",
+              "nativeQueryRef": "Driver",
+              "active": true,
+              "displayName": "Driver"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "results"
+                        }
+                      },
+                      "Property": "race_wins"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(results.race_wins)",
+              "nativeQueryRef": "Number of Race Wins",
+              "active": true,
+              "displayName": "Number of Race Wins"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "results"
+                        }
+                      },
+                      "Property": "race_podium"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(results.race_podium)",
+              "nativeQueryRef": "Number of Race Podiums",
+              "displayName": "Number of Race Podiums"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbles": [
+        {
+          "properties": {
+            "markerShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'square'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "results"
+                                        }
+                                      },
+                                      "Property": "race_wins"
+                                    }
+                                  },
+                                  "Function": 0
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "80D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#cccccc'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "results"
+                                        }
+                                      },
+                                      "Property": "race_wins"
+                                    }
+                                  },
+                                  "Function": 0
+                                }
+                              },
+                              "Right": {
+                                "RangePercent": {
+                                  "Min": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Aggregation": {
+                                                  "Expression": {
+                                                    "Column": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "results"
+                                                        }
+                                                      },
+                                                      "Property": "race_wins"
+                                                    }
+                                                  },
+                                                  "Function": 0
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 3
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Max": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Aggregation": {
+                                                  "Expression": {
+                                                    "Column": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "results"
+                                                        }
+                                                      },
+                                                      "Property": "race_wins"
+                                                    }
+                                                  },
+                                                  "Function": 0
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 4
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Percent": 0.8
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#A03232'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Most successful Drivers'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'c02bd69e3444bca1dc0b'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
