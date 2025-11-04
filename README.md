@@ -134,9 +134,3 @@ Original author: [Malvik Vaghadia][https://github.com/malvik01]
 
 All rights and credits belong to the original creator.  
 The MIT License permits use, modification, and distribution, provided the original license and copyright notice are retained.
-
-
----
-
-## 🙌 Contributions
-Feel free to fork the repository, suggest improvements, or submit pull requests to enhance the report or expand the dataset.
