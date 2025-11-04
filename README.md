@@ -116,7 +116,9 @@ The report is structured into several interactive pages:
 ---
 
 ## 🎥 Preview
-![Formula-One-Project-Power-BI](assets/f1-report-demo.gif) 
+<img src="assets/f1-report-demo2.gif" alt="Formula-One-Project-Power-BI" width="500">
+
+<!-- ![Formula-One-Project-Power-BI](assets/f1-report-demo2.gif) -->
 
 ---
 
