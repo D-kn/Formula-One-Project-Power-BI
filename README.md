@@ -6,15 +6,16 @@ This Power BI project analyzes Formula 1 data from 1950 to 2020, offering a hist
 ---
 
 ## 🔗 Data Sources and Processing
-Data was sourced from the Ergast Developer API and includes the following files:
+Data was compiled from publicly available historical Formula 1 datasets.  
+The data was cleaned, transformed, and structured using **Power Query** within Power BI.  
+Relationships were established between tables to enable dynamic filtering and interactive analysis.
 
+**Included data files:**
 - `circuits.json`: Circuit metadata  
 - `constructors.csv`: Constructor details  
 - `drivers.txt`: Driver profiles  
 - `races.csv`: Race calendar  
 - `results.csv`: Race outcomes  
-
-Data was cleaned and transformed using **Power Query** in Power BI. Relationships were established between tables to enable dynamic filtering and cross-analysis.
 
 ---
 
@@ -88,7 +89,6 @@ Normalizes race points across seasons using a consistent scoring system based on
 
 ---
 
-
 ## 📊 Report Overview
 
 The report is structured into several interactive pages:
@@ -112,25 +112,44 @@ The report is structured into several interactive pages:
 - Circuit popularity and usage trends.
 - Geographical distribution of races.
 
-
 ---
 
+## 🎥 Preview
+
+<p align="center">
+  <img src="assets/f1-report-demo2.gif" alt="Formula-One-Project-Power-BI" width="700">
+</p>
+
+<!-- ![Formula-One-Project-Power-BI](assets/f1-report-demo2.gif) -->
+
+---
 
 ## 🧭 Usage
 
-1. **Download the report files** from the repository.
-2. **Copy the full path** of the downloaded files.
-3. **Paste the path** into the Power BI parameter field to connect the report to the data source.
-
+1. **Download the report files** from the repository.  
+2. **Copy the full path** of the downloaded files.  
+3. **Paste the path** into the Power BI parameter field to connect the report to the data source.  
+4. **Publish the report** to **Power BI Service (Microsoft Fabric)** for online access and sharing.
 
 ---
 
+## 🏆 Achievements
+
+- 🚀 **Developed** a comprehensive Formula 1 analytics report covering data from 1950–2020.  
+- 📊 **Collected, cleaned, and modeled** multi-source historical datasets to ensure accuracy and consistency.  
+- ⚙️ **Designed advanced DAX measures** for podium finishes, race wins, and normalized scoring systems.  
+- 🧩 **Built an intuitive Power BI data model** enabling seamless filtering across drivers, constructors, and circuits.  
+- 🎨 **Created interactive dashboards** featuring dynamic visuals, drill-throughs, and tooltips for deeper insights.  
+- ☁️ **Published and deployed** the report to **Power BI Service (Microsoft Fabric)** for online collaboration.  
+- 📈 **Enabled comparative analysis** of drivers, constructors, and races across seven decades of Formula 1 history.
+
+---
 
 ## 📜 License
 
 This project is open-source and distributed under the MIT License.
 
-Original author: [Malvik Vaghadia][https://github.com/malvik01]
+Original author: [Malvik Vaghadia](https://github.com/malvik01)
 
 All rights and credits belong to the original creator.  
 The MIT License permits use, modification, and distribution, provided the original license and copyright notice are retained.
