@@ -15,7 +15,7 @@ This Power BI project analyzes Formula 1 data from 1950 to 2020, offering a hist
         <img src="assets/Pics/summary.png" alt="Summary Page" width="500"/>
       </td>
       <td align="center">
-        <img src="assets/Pics/Drivers.png" alt="Driver Analysis" width="500"/>
+        <img src="assets/Pics/Drivers2.png" alt="Driver Analysis Page" width="500"/>
       </td>
     </tr>
     <tr>
