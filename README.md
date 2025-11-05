@@ -5,6 +5,32 @@ This Power BI project analyzes Formula 1 data from 1950 to 2020, offering a hist
 
 ---
 
+
+## 🎥 Preview
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="assets/Pics/summary.png" alt="Summary Page" width="500"/>
+      </td>
+      <td align="center">
+        <img src="assets/Pics/Drivers.png" alt="Driver Analysis" width="500"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="assets/Pics/Constructors.png" alt="Constructor Analysis" width="500"/>
+      </td>
+      <td align="center">
+        <img src="assets/Pics/GrandPrix_Circuits.png" alt="Grand Prix and Circuits Analysis" width="500"/>
+      </td>
+    </tr>
+  </table>
+</p>
+
+---
+
 ## 🔗 Data Sources and Processing
 Data was compiled from publicly available historical Formula 1 datasets.  
 The data was cleaned, transformed, and structured using **Power Query** within Power BI.  
@@ -144,30 +170,6 @@ The report is structured into several interactive pages:
 
 ---
 
-## 🎥 Preview
-
-<p align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="assets/Pics/summary.png" alt="Summary Page" width="500"/>
-      </td>
-      <td align="center">
-        <img src="assets/Pics/Drivers.png" alt="Driver Analysis" width="500"/>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="assets/Pics/Constructors.png" alt="Constructor Analysis" width="500"/>
-      </td>
-      <td align="center">
-        <img src="assets/Pics/GrandPrix_Circuits.png" alt="Grand Prix and Circuits Analysis" width="500"/>
-      </td>
-    </tr>
-  </table>
-</p>
-
----
 
 ## 🧭 Usage
 
