@@ -21,71 +21,101 @@ Relationships were established between tables to enable dynamic filtering and in
 
 ## 🧠 Data Model
 
-### Drivers
-- `driver_id`
-- `driver_name`
+<table>
+  <tr>
+    <td valign="top">
+
+### 🏎️ Drivers
+- `driver_id`  
+- `driver_name`  
 - `driver_nationality`
 
-### Constructors
-- `constructor_id`
-- `constructor_name`
+   </td>
+    <td valign="top">
 
-### Results
-- `result_id`
-- `race_id`
-- `driver_id`
-- `constructor_id`
-- `finish_position`
-- `points`
+### 🏗️ Constructors
+- `constructor_id`  
+- `constructor_name`  
+- `constructor_nationality`
 
-### Circuits
-- `circuit_id`
-- `circuit_name`
+   </td>
+    <td valign="top">
+
+### 🏁 Results
+- `result_id`  
+- `race_id`  
+- `driver_id`  
+- `constructor_id`  
+- `finish_position`  
+
+   </td>
+  </tr>
+  <tr>
+    <td valign="top">
+
+### 🏟️ Circuits
+- `circuit_id`  
+- `circuit_name`  
 - `country`
 
-### Races
-- `race_id`
-- `circuit_id`
-- `date`
-- `grand_prix`
+   </td>
+    <td valign="top">
+
+### 🗓️ Races
+- `race_id`  
+- `circuit_id`  
+- `grand_prix`  
 - `year`
+
+   </td>
+    <td valign="top">
+
+### 🔗 Relationships
+- Drivers ↔ Results  
+- Constructors ↔ Results  
+- Circuits ↔ Races ↔ Results  
+
+   </td>
+  </tr>
+</table>
 
 ---
 
-## 🛠️ Custom Columns
+## 🛠️ Custom Columns and Measures
 
-### 🥉 `race_podium`
-Indicates whether a driver finished in the top 3 positions.
-- `1`: Driver finished 1st, 2nd, or 3rd (podium finish)
-- `0`: Driver finished outside the top 3
+### 🥉 race_podium Indicates whether a driver finished in the top 3 positions. 
+- 1: Driver finished 1st, 2nd, or 3rd (podium finish)
+- 0: Driver finished outside the top 3
+Used to analyze podium consistency across drivers, constructors over seasons. 
 
-Used to analyze podium consistency across drivers, constructors, and seasons.
-
-### 🏆 `race_wins`
-Flags whether a driver won the race.
-- `1`: Driver won the race
-- `0`: Driver did not win
-
+### 🏆 race_wins Flags whether a driver won the race. 
+- 1: Driver won the race
+- 0: Driver did not win
 Helps track total wins and identify dominant drivers or teams over time.
 
 ### 🧮 `total_points_adjusted`
-Normalizes race points across seasons using a consistent scoring system based on the modern Formula 1 format. This allows fair comparisons across eras with different point systems.
+Normalizes race points across seasons using a consistent scoring system based on the modern Formula 1 format.  
+This allows fair comparisons across eras with different point systems.
 
-#### Adjusted Points Array
+| **Finish Position** | **total_points_adjusted** |
+|---------------------|---------------------------|
+| 1st                 | 25                        |
+| 2nd                 | 18                        |
+| 3rd                 | 15                        |
+| 4th                 | 12                        |
+| 5th                 | 10                        |
+| 6th                 | 8                         |
+| 7th                 | 6                         |
+| 8th                 | 4                         |
+| 9th                 | 2                         |
+| 10th                | 1                         |
+| 11th and beyond     | 0                         |
 
-| **Finish Position** | **Adjusted Points** |
-|---------------------|---------------------|
-| 1st                 | 25                  |
-| 2nd                 | 18                  |
-| 3rd                 | 15                  |
-| 4th                 | 12                  |
-| 5th                 | 10                  |
-| 6th                 | 8                   |
-| 7th                 | 6                   |
-| 8th                 | 4                   |
-| 9th                 | 2                   |
-| 10th                | 1                   |
-| 11th and beyond     | 0                   |
+### 📈 `% race_wins`
+Calculates the percentage of races won by a driver relative to his total participations.  
+
+### 🏁 `% race_podium`
+Measures the percentage of races where a driver finished on the podium (top 3).  
 
 ---
 
@@ -117,10 +147,25 @@ The report is structured into several interactive pages:
 ## 🎥 Preview
 
 <p align="center">
-  <img src="assets/f1-report-demo2.gif" alt="Formula-One-Project-Power-BI" width="700">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="assets/Pics/summary.png" alt="Summary Page" width="500"/>
+      </td>
+      <td align="center">
+        <img src="assets/Pics/Drivers.png" alt="Driver Analysis" width="500"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="assets/Pics/Constructors.png" alt="Constructor Analysis" width="500"/>
+      </td>
+      <td align="center">
+        <img src="assets/Pics/GrandPrix_Circuits.png" alt="Grand Prix and Circuits Analysis" width="500"/>
+      </td>
+    </tr>
+  </table>
 </p>
-
-<!-- ![Formula-One-Project-Power-BI](assets/f1-report-demo2.gif) -->
 
 ---
 
@@ -135,21 +180,21 @@ The report is structured into several interactive pages:
 
 ## 🏆 Achievements
 
-- 🚀 **Developed** a comprehensive Formula 1 analytics report covering data from 1950–2020.  
+- 🚀 **Developed** a comprehensive Formula 1 analytics report covering data from 1950 to 2020.  
 - 📊 **Collected, cleaned, and modeled** multi-source historical datasets to ensure accuracy and consistency.  
 - ⚙️ **Designed advanced DAX measures** for podium finishes, race wins, and normalized scoring systems.  
 - 🧩 **Built an intuitive Power BI data model** enabling seamless filtering across drivers, constructors, and circuits.  
 - 🎨 **Created interactive dashboards** featuring dynamic visuals, drill-throughs, and tooltips for deeper insights.  
 - ☁️ **Published and deployed** the report to **Power BI Service (Microsoft Fabric)** for online collaboration.  
-- 📈 **Enabled comparative analysis** of drivers, constructors, and races across seven decades of Formula 1 history.
+- 📈 **Enabled comparative analysis** of drivers, constructors, and races across seven decades of Formula 1 history.  
+- 🧮 **Enhanced analysis** using percentage-based measures (`% race_wins` and `% race_podium`) to reveal performance consistency and winning efficiency.
 
 ---
 
 ## 📜 License
 
-This project is open-source and distributed under the MIT License.
-
+This project is open-source and distributed under the MIT License. <br>
 Original author: [Malvik Vaghadia](https://github.com/malvik01)
 
 All rights and credits belong to the original creator.  
-The MIT License permits use, modification, and distribution, provided the original license and copyright notice are retained.
+The MIT License permits use, modification, and distribution, provided the original license and copyright notice are retained
