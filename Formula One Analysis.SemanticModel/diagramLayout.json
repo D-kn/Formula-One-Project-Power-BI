@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 23.208389261744941,
-            "y": 154.79865771812081
+            "x": 79.599328859060392,
+            "y": 28.74832214765101
           },
           "nodeIndex": "circuits",
           "nodeLineageTag": "7fc7fd11-7c32-407a-a887-4fedb94df5cc",
@@ -72,6 +72,19 @@
             "width": 234
           },
           "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1325.0496644295306,
+            "y": 283.28775167785238
+          },
+          "nodeIndex": "Parameter",
+          "nodeLineageTag": "648b2243-ddb7-4e21-8a4b-051ad99a1aea",
+          "size": {
+            "height": 346.60402684563758,
+            "width": 234
+          },
+          "zIndex": 6
         }
       ],
       "name": "All tables",

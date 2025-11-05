@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "073212bff09dfe3ac759",
+  "name": "3c75836bd8e85d190bdc",
   "position": {
     "x": 544,
     "y": 141.53846153846155,
-    "z": 3000,
+    "z": 8000,
     "height": 108.30769230769231,
-    "width": 700.30769230769226
+    "width": 700.30769230769226,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -81,6 +82,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Between'"
+                }
+              }
+            },
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "1969D"
                 }
               }
             }
@@ -159,7 +167,55 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "r",
+                    "Entity": "races",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
+                        "Left": {
+                          "HierarchyLevel": {
+                            "Expression": {
+                              "Hierarchy": {
+                                "Expression": {
+                                  "PropertyVariationSource": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "r"
+                                      }
+                                    },
+                                    "Name": "Variation",
+                                    "Property": "date"
+                                  }
+                                },
+                                "Hierarchy": "Date Hierarchy"
+                              }
+                            },
+                            "Level": "Year"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "1969D"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },
@@ -216,5 +272,34 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a7d03d245e35e31115c8",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "races"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "date"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Year"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

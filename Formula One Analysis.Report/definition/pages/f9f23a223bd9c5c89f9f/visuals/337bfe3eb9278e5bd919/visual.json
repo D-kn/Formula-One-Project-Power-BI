@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 108.30769230769231,
     "width": 700.30769230769226,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -78,6 +78,13 @@
       "data": [
         {
           "properties": {
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "1969D"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -160,7 +167,55 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "r",
+                    "Entity": "races",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
+                        "Left": {
+                          "HierarchyLevel": {
+                            "Expression": {
+                              "Hierarchy": {
+                                "Expression": {
+                                  "PropertyVariationSource": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "r"
+                                      }
+                                    },
+                                    "Name": "Variation",
+                                    "Property": "date"
+                                  }
+                                },
+                                "Hierarchy": "Date Hierarchy"
+                              }
+                            },
+                            "Level": "Year"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "1969D"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },

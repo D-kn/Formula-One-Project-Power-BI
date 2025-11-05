@@ -73,6 +73,21 @@
       }
     ]
   },
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "202L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "visibility": "HiddenInViewMode",
   "type": "Tooltip"
 }

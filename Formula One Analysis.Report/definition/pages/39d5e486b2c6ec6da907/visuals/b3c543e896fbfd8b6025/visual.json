@@ -7,12 +7,31 @@
     "z": 6000,
     "height": 333.52577319587624,
     "width": 703.67010309278351,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "azureMap",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "circuits"
+                    }
+                  },
+                  "Property": "city"
+                }
+              },
+              "queryRef": "circuits.city",
+              "nativeQueryRef": "city",
+              "active": true
+            }
+          ]
+        },
         "Size": {
           "projections": [
             {
@@ -65,17 +84,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "circuits"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "circuits"
+                        }
+                      },
+                      "Property": "longitude"
                     }
                   },
-                  "Property": "longitude"
+                  "Function": 1
                 }
               },
               "queryRef": "circuits.longitude",
-              "nativeQueryRef": "longitude"
+              "nativeQueryRef": "Average of longitude"
             }
           ]
         },
@@ -83,17 +107,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "circuits"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "circuits"
+                        }
+                      },
+                      "Property": "latitude"
                     }
                   },
-                  "Property": "latitude"
+                  "Function": 1
                 }
               },
               "queryRef": "circuits.latitude",
-              "nativeQueryRef": "latitude"
+              "nativeQueryRef": "Average of latitude"
             }
           ]
         }
@@ -145,14 +174,14 @@
             "maxRadius": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "14L"
                 }
               }
             },
             "minBubbleRadius": {
               "expr": {
                 "Literal": {
-                  "Value": "5L"
+                  "Value": "4L"
                 }
               }
             },
@@ -452,14 +481,21 @@
             "section": {
               "expr": {
                 "Literal": {
-                  "Value": "'c02bd69e3444bca1dc0b'"
+                  "Value": "'___AUTO___'"
                 }
               }
             },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
                 }
               }
             }
